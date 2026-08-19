@@ -1,0 +1,15 @@
+using System;
+
+class Program1
+{
+    static void Main4(string[] args)
+    {
+        Vehicle v = new Vehicle("UP16AB1234", "Swift", "White");
+
+        v.DisplayDetails();
+        v.StartVehicle();
+        v.StopVehicle();
+
+        Console.ReadLine();
+    }
+}
