@@ -1,0 +1,15 @@
+using System;
+
+public partial class Vehicle
+{
+    public string VehicleNumber { get; set; }
+    public string VehicleModel { get; set; }
+    public string VehicleColor { get; set; }
+
+    public Vehicle(string vehicleNumber, string vehicleModel, string vehicleColor)
+    {
+        VehicleNumber = vehicleNumber;
+        VehicleModel = vehicleModel;
+        VehicleColor = vehicleColor;
+    }
+}
