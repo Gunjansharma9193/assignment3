@@ -1,0 +1,39 @@
+using System;
+
+static class ApplicationConfiguration
+{
+    // Database connection information
+    public static string DatabaseServer = "localhost";
+    public static string DatabaseName = "StudentDB";
+    public static string Username = "admin";
+
+    // Application-wide settings
+    public static string ApplicationName = "Student Management System";
+    public static string ApplicationVersion = "1.0";
+    public static int SessionTimeout = 30;
+
+    // Display configuration
+    public static void DisplayConfiguration()
+    {
+        Console.WriteLine("=== Application Configuration ===");
+
+        Console.WriteLine("Database Server: " + DatabaseServer);
+        Console.WriteLine("Database Name: " + DatabaseName);
+        Console.WriteLine("Username: " + Username);
+
+        Console.WriteLine("Application Name: " + ApplicationName);
+        Console.WriteLine("Application Version: " + ApplicationVersion);
+        Console.WriteLine("Session Timeout: " + SessionTimeout + " minutes");
+    }
+}
+
+class Program9
+{
+    static void Main9(string[] args)
+    {
+        // Access static members directly using class name
+        ApplicationConfiguration.DisplayConfiguration();
+
+        Console.ReadLine();
+    }
+}
