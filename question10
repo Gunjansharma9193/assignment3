@@ -1,0 +1,44 @@
+using System;
+
+// Abstract base class
+abstract class Notification
+{
+    public abstract void SendNotification();
+}
+
+// Derived class
+class EmailNotification : Notification
+{
+    public override void SendNotification()
+    {
+        Console.WriteLine("Email notification sent.");
+    }
+}
+
+// Specialized class that cannot be inherited further
+sealed class ImportantEmailNotification : EmailNotification
+{
+    public void SendImportantNotification()
+    {
+        Console.WriteLine("Important email notification sent.");
+    }
+}
+
+class Program10
+{
+    static void Main(string[] args)
+    {
+        // Create EmailNotification object
+        EmailNotification email = new EmailNotification();
+        email.SendNotification();
+
+        // Create specialized notification object
+        ImportantEmailNotification important =
+            new ImportantEmailNotification();
+
+        important.SendNotification();
+        important.SendImportantNotification();
+
+        Console.ReadLine();
+    }
+}
