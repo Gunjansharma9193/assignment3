@@ -1,0 +1,21 @@
+using System;
+
+public partial class Vehicle
+{
+    public void StartVehicle()
+    {
+        Console.WriteLine("Vehicle Started");
+    }
+
+    public void StopVehicle()
+    {
+        Console.WriteLine("Vehicle Stopped");
+    }
+
+    public void DisplayDetails()
+    {
+        Console.WriteLine("Vehicle Number: " + VehicleNumber);
+        Console.WriteLine("Vehicle Model: " + VehicleModel);
+        Console.WriteLine("Vehicle Color: " + VehicleColor);
+    }
+}
