@@ -1,0 +1,42 @@
+using System;
+
+class University
+{
+    // Nested Department class
+    public class Department
+    {
+        public string DepartmentName;
+        public string HODName;
+        public int FacultyMembers;
+
+        // Constructor
+        public Department(string departmentName, string hodName, int facultyMembers)
+        {
+            DepartmentName = departmentName;
+            HODName = hodName;
+            FacultyMembers = facultyMembers;
+        }
+
+        // Display department details
+        public void DisplayDetails()
+        {
+            Console.WriteLine("Department Name: " + DepartmentName);
+            Console.WriteLine("HOD Name: " + HODName);
+            Console.WriteLine("Number of Faculty Members: " + FacultyMembers);
+        }
+    }
+}
+
+class Program6
+{
+    static void Main7(string[] args)
+    {
+        // Accessing nested Department class
+        University.Department department =
+            new University.Department("Computer Science", "Dr. Sharma", 25);
+
+        department.DisplayDetails();
+
+        Console.ReadLine();
+    }
+}
